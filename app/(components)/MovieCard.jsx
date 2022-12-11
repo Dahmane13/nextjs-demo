@@ -11,18 +11,19 @@ const getGenres = async () => {
 };
 async function MovieCard({ rank, image, title, genres }) {
   const data = await getGenres();
+  console.log(data);
   let genresNames = [];
   genres.map((item) => {
-    genresNames.push(data["genres"].find((o) => o.id === item).name);
+    genresNames.push(data["genres"].find((o) => o.id === item)?.name);
   });
-
+  console.log(genresNames);
   return (
-    <div className=" bg-white w-fit h-fit shadow-md">
+    <div className=" bg-white w-fit h-fit shadow-md overflow-hidden">
       <div className="">
         <Image src={image} width={300} height={400} />
       </div>
-      <div className="p-3">
-        <span className=" text-lg">{title}</span>
+      <div className="p-3  overflow-hidden whitespace-nowrap w-72 text-ellipsis">
+        <span className=" text-lg text-ellipsis ">{title}</span>
         <ul className="flex gap-1 text-[#E3A61C]">
           {genresNames.map((item) => (
             <li>{item}</li>

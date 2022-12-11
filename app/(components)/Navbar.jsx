@@ -1,13 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Navbar() {
   return (
     <div className=" flex w-full items-center justify-between px-6 py-2 z-50 bg-black text-white">
       <div className="flex w-fit items-center gap-20">
-        <Image src={"/imdb.svg"} width={100} height={100} />
+        <Link href={"/"}>
+          <Image src={"/imdb.svg"} width={100} height={100} />
+        </Link>
         <ul className="uppercase flex gap-8 font-medium">
-          <li className="text-[#E3A61C]">Movies</li>
+          <Link href={"/movies"}>
+            <li className="text-[#E3A61C]">Movies</li>
+          </Link>
           <li>Celebrities</li>
           <li>photos</li>
           <li>community</li>
