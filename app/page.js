@@ -16,7 +16,7 @@ const getMovies = async () => {
 async function Home() {
   const data = await getMovies();
   return (
-    <div id="test">
+    <div>
       <Poster />
       <MoviesContainer data={data} limit={6} />
     </div>

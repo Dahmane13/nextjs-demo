@@ -3,7 +3,7 @@ import MoviesContainer from "../(components)/MoviesContainer";
 const getMovies = async () => {
   const res = await fetch(
     "https://api.themoviedb.org/3/trending/all/day?api_key=15d7a80a7c308b752bb115e6b0ff1757",
-    { cache: "no-cache" }
+    { cache: "no-store" }
   );
 
   const data = res.json();
