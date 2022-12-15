@@ -18,7 +18,7 @@ async function MovieCard({ rank, image, title, genres }) {
   });
   console.log(genresNames);
   return (
-    <div className=" bg-white w-fit h-fit shadow-md overflow-hidden">
+    <div className=" bg-white w-fit h-fit shadow-md hover:shadow-lg overflow-hidden cursor-pointer">
       <div className="">
         <Image src={image} width={300} height={400} />
       </div>
