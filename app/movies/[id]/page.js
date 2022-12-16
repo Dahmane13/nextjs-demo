@@ -43,7 +43,7 @@ function MovieDetail({ params }) {
   console.log(images);
   return (
     <div>
-      {movie && images ? (
+      {movie && images && (
         <div>
           <MoviePoster
             image={"https://image.tmdb.org/t/p/original" + movie.backdrop_path}
@@ -114,10 +114,6 @@ function MovieDetail({ params }) {
               </div>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className=" w.full h-screen flex justify-center items-center">
-          <img src="/loading.gif" className=" w-56" />
         </div>
       )}
     </div>
