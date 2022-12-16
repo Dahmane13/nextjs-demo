@@ -14,7 +14,7 @@ function MovieShortDesc({
 }) {
   return (
     <div className="flex gap-2 text-white w-fit text-xl">
-      <Image src={poster} width={250} height={450} />
+      <Image src={poster} width={250} height={350} quality={75} />
       <div className="flex flex-col gap-0.5">
         <span>{year}</span>
         <span className=" text-4xl font-medium">{title}</span>

@@ -3,6 +3,7 @@ import React from "react";
 import MovieCard from "./MovieCard";
 
 function MoviesContainer({ data, limit }) {
+  console.log(data["results"]);
   return (
     <div className="  top-[-7rem] w-3/4 bg-[#EEEEEE] left-0 right-0 my-0 mx-auto p-10 grid grid-cols-4fr gap-x-4 gap-y-6">
       {data["results"].slice(0, limit).map((item) => (
