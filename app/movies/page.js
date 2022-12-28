@@ -15,7 +15,7 @@ async function Contact() {
   return (
     <div>
       <h1 className="w-3/4 left-0 right-0 my-0 mx-auto pl-10 mt-10 text-2xl uppercase">
-        Trending Movies
+        Trending Moviess
       </h1>
       <MoviesContainer data={data} limit={12} />
     </div>
